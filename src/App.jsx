@@ -99,7 +99,7 @@ export default function App() {
           width="70%"
           margin="0 auto"
         >
-          <Heading level={1}>My Notes App</Heading>
+          <Heading level={1}>MyCigna HK POC</Heading>
           <View as="form" margin="3rem 0" onSubmit={createNote}>
             <Flex
               direction="column"
@@ -109,16 +109,16 @@ export default function App() {
             >
               <TextField
                 name="name"
-                placeholder="Note Name"
-                label="Note Name"
+                placeholder="Policy Change Request ID"
+                label="Policy Change Request ID"
                 labelHidden
                 variation="quiet"
                 required
               />
               <TextField
                 name="description"
-                placeholder="Note Description"
-                label="Note Description"
+                placeholder="Policy Change Description"
+                label="Policy Change Description"
                 labelHidden
                 variation="quiet"
                 required
@@ -132,12 +132,12 @@ export default function App() {
               />
 
               <Button type="submit" variation="primary">
-                Create Note
+                Create Policy Change Request
               </Button>
             </Flex>
           </View>
           <Divider />
-          <Heading level={2}>Current Notes</Heading>
+          <Heading level={2}>Policy Change Request History</Heading>
           <Grid
             margin="3rem 0"
             autoFlow="column"
