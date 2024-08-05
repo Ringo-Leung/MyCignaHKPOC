@@ -17,6 +17,11 @@ import { getUrl } from "aws-amplify/storage";
 import { uploadData } from "aws-amplify/storage";
 import { generateClient } from "aws-amplify/data";
 import outputs from "../amplify_outputs.json";
+import logo from './assets/cigna_logo.png';
+import AWS_logo from './assets/AWS_Amplify.png';
+import AWS_cognito from './assets/AWS_Cognito.png';
+import React_logo from './assets/React_logo.png';
+
 /**
  * @type {import('aws-amplify/data').Client<import('../amplify/data/resource').Schema>}
  */
@@ -90,7 +95,7 @@ export default function App() {
 
   return (
     <Authenticator>
-      {({ signOut }) => (
+      {({ signOut, user }) => (
         <Flex
           className="App"
           justifyContent="center"
@@ -99,8 +104,22 @@ export default function App() {
           width="70%"
           margin="0 auto"
         >
-          <Heading level={1}>MyCigna HK POC</Heading>
-          <View as="form" margin="3rem 0" onSubmit={createNote}>
+          <img src={logo} alt="Cigna Logo" height={100}/>
+          <Heading level={3}>MyCigna HK POC</Heading>
+          
+          <div>
+            <img src={AWS_logo} alt="AWS Logo" height={80} style={{ paddingRight: '20px' }}/>
+            <img src={AWS_cognito} alt="AWS Congnito Logo" height={80} style={{ paddingRight: '20px' }}/>
+            <img src={React_logo} alt="React Logo" height={80}/>
+          </div>
+          
+          <div style={{ color: 'black' }}>User: {user?.signInDetails?.loginId}</div>
+          
+          <Divider />
+          <Heading level={2}>Sumbit Policy Change Request</Heading>
+          
+          
+          <View as="form" onSubmit={createNote}>
             <Flex
               direction="column"
               justifyContent="center"
@@ -129,6 +148,7 @@ export default function App() {
                 type="file"
                 alignSelf={"end"}
                 accept="image/png, image/jpeg"
+               color="black"
               />
 
               <Button type="submit" variation="primary">

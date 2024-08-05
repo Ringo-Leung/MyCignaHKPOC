@@ -33,3 +33,12 @@
 .box:nth-child(3n + 3) {
   grid-column: 3;
 }
+
+body {
+  margin: 0;
+  background: linear-gradient(180deg, rgb(160, 171, 231), rgb(255, 255, 255));
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  justify-content: center;
+  align-items: center;
+}
+
