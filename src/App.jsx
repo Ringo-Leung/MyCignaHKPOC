@@ -192,7 +192,7 @@ export default function App() {
                   variation="destructive"
                   onClick={() => deleteNote(note)}
                 >
-                  Delete note
+                  Delete PCR
                 </Button>
               </Flex>
             ))}
