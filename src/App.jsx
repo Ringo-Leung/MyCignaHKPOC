@@ -105,7 +105,7 @@ export default function App() {
           margin="0 auto"
         >
           <img src={logo} alt="Cigna Logo" height={100}/>
-          <Heading level={3}>MyCigna HK POC 2024</Heading>
+          <Heading level={3}>MyCigna HK POC 2025</Heading>
           
           <div>
             <img src={AWS_logo} alt="AWS Logo" height={80} style={{ paddingRight: '20px' }}/>
